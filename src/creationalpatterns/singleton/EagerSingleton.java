@@ -4,7 +4,7 @@ package creationalpatterns.singleton;
 public class EagerSingleton {
     private static EagerSingleton singleton = new EagerSingleton();
 
-    private EagerSingleton(){
+    private EagerSingleton() {
 
     }
 

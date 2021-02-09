@@ -1,6 +1,6 @@
 package creationalpatterns.singleton;
 
-// Lazy Loading singleton pattern ---- it is thread safe
+// Lazy Loading singleton pattern ---- this example is thread safe
 public class ThreadSafeLazySingleton {
     private static volatile ThreadSafeLazySingleton singleton;
 
