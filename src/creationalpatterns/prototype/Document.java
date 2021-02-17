@@ -1,6 +1,6 @@
 package creationalpatterns.prototype;
 
-public class Document implements Cloneable{
+public class Document implements Cloneable {
     private Long id;
     private String name;
     private DocumentType documentType;
@@ -58,10 +58,6 @@ public class Document implements Cloneable{
         this.data = data;
     }
 
-    @Override
-    protected Document clone() throws CloneNotSupportedException {
-        return (Document) super.clone();
-    }
 
     @Override
     public String toString() {
@@ -72,5 +68,34 @@ public class Document implements Cloneable{
                 ", category=" + category +
                 ", data='" + data + '\'' +
                 '}';
+    }
+
+//    /**
+//     * Shallow Copy
+//     * @return
+//     * @throws CloneNotSupportedException
+//     */
+//    @Override
+//    protected Document clone() throws CloneNotSupportedException {
+//        return (Document) super.clone();
+//    }
+
+    /**
+     * Deep Copy
+     *
+     * @return
+     * @throws CloneNotSupportedException
+     */
+    @Override
+    protected Document clone() throws CloneNotSupportedException {
+
+        Document document = (Document) super.clone();
+        DocumentType documentType = document.documentType.clone();
+        Category category = document.getCategory().clone();
+
+        document.setDocumentType(documentType);
+        document.setCategory(category);
+
+        return document;
     }
 }

@@ -1,6 +1,6 @@
 package creationalpatterns.prototype;
 
-public class Category implements Cloneable{
+public class Category implements Cloneable {
     private Long id;
     private String name;
 
@@ -34,5 +34,10 @@ public class Category implements Cloneable{
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    protected Category clone() throws CloneNotSupportedException {
+        return (Category) super.clone();
     }
 }

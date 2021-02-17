@@ -23,6 +23,7 @@ public class GeneralEntityService {
 
         return documentType;
     }
+
     @SneakyThrows
     public Category findCategoryById(Long id) {
         Thread.sleep(1000);
@@ -43,6 +44,7 @@ public class GeneralEntityService {
 
         return category;
     }
+
     @SneakyThrows
     public Document findDocumentById(Long id) {
         Thread.sleep(2000);
