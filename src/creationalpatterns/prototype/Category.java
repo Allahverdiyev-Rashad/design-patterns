@@ -1,6 +1,6 @@
 package creationalpatterns.prototype;
 
-public class Category {
+public class Category implements Cloneable{
     private Long id;
     private String name;
 

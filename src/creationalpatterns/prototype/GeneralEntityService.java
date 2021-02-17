@@ -1,6 +1,9 @@
 package creationalpatterns.prototype;
 
+import lombok.SneakyThrows;
+
 public class GeneralEntityService {
+    @SneakyThrows
     public DocumentType findDocumentTypeById(Long id) {
         Thread.sleep(1000);
 
@@ -20,7 +23,7 @@ public class GeneralEntityService {
 
         return documentType;
     }
-
+    @SneakyThrows
     public Category findCategoryById(Long id) {
         Thread.sleep(1000);
 
@@ -40,7 +43,7 @@ public class GeneralEntityService {
 
         return category;
     }
-
+    @SneakyThrows
     public Document findDocumentById(Long id) {
         Thread.sleep(2000);
 
@@ -51,10 +54,9 @@ public class GeneralEntityService {
 
         String name;
         String data;
-        String name;
         if (id.compareTo(1L) == 0) {
             name = "Letter";
-            data = "Dear friend Jhon..."
+            data = "Dear friend John...";
         } else if (id.compareTo(2L) == 0) {
             name = "Report";
             data = "This report for CEO...";

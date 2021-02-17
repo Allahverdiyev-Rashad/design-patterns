@@ -1,6 +1,6 @@
 package creationalpatterns.prototype;
 
-public class Document {
+public class Document implements Cloneable{
     private Long id;
     private String name;
     private DocumentType documentType;
@@ -56,6 +56,11 @@ public class Document {
 
     public void setData(String data) {
         this.data = data;
+    }
+
+    @Override
+    protected Document clone() throws CloneNotSupportedException {
+        return (Document) super.clone();
     }
 
     @Override

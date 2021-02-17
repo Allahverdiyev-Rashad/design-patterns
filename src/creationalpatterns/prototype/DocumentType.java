@@ -1,6 +1,6 @@
 package creationalpatterns.prototype;
 
-public class DocumentType {
+public class DocumentType implements Cloneable{
     private Long id;
     private String name;
 
