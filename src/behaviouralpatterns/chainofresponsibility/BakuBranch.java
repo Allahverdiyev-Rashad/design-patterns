@@ -2,7 +2,7 @@ package behaviouralpatterns.chainofresponsibility;
 
 public class BakuBranch extends CargoCompany {
 
-    public BakuBranch(EnumCity enumCity) {
+    public BakuBranch() {
         super(EnumCity.BAKU);
     }
 }
