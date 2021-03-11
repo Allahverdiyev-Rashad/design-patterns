@@ -21,8 +21,9 @@ public abstract class CargoCompany {
         return nextCargoCompany;
     }
 
-    public void setNextCargoCompany(CargoCompany nextCargoCompany) {
+    public CargoCompany setNextCargoCompany(CargoCompany nextCargoCompany) {
         this.nextCargoCompany = nextCargoCompany;
+        return this;
     }
 
     public void send(EnumCity city) {
@@ -45,12 +46,12 @@ public abstract class CargoCompany {
 
     private void printCargoDeliveryInformation() {
         System.out.println(getEnumCity().getCity()
-                + " the branch took delivery");
+                + " branch took delivery");
     }
 
     private void printIncomingCargoInformation(EnumCity city) {
         System.out.println("Cargo to "
-                + city.getCity() + "-> came to the"
+                + city.getCity() + "-> came to the "
                 + getEnumCity().getCity() + " branch");
     }
 }
