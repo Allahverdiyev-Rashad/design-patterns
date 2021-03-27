@@ -13,7 +13,7 @@ public class Book2 {
         questions[2] = new Question(8L);
         questions[3] = new Question(9L);
         questions[4] = new Question(10L);
-        questions[5] = new Question(11);
+        questions[5] = new Question(11L);
         questions[6] = new Question(12L);
         questions[7] = new Question(13L);
         questions[8] = new Question(14L);
@@ -28,11 +28,8 @@ public class Book2 {
         this.name = name;
     }
 
-    public Question[] getQuestions() {
-        return questions;
+    public QuestionIterator getQuestionIterator() {
+        return new QuestionIterator(questions);
     }
 
-    public void setQuestions(Question[] questions) {
-        this.questions = questions;
-    }
 }
