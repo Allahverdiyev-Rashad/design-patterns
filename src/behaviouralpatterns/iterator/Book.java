@@ -8,7 +8,7 @@ public class Book {
     private String name;
     private List<Question> questionList;
 
-    public Book(String name, List<Question> questionList) {
+    public Book(String name) {
         this.name = name;
         this.questionList = new ArrayList<>();
 
@@ -18,6 +18,7 @@ public class Book {
         questionList.add(new Question(4L));
         questionList.add(new Question(5L));
     }
+
 
     public String getName() {
         return name;

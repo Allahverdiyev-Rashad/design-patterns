@@ -4,7 +4,7 @@ public class Book2 {
     private String name;
     private Question[] questions;
 
-    public Book2(String name, Question[] questions) {
+    public Book2(String name) {
         this.name = name;
         this.questions = new Question[10];
 
